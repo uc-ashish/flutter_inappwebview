@@ -475,9 +475,9 @@ public class InAppWebView: WKWebView, UIScrollViewDelegate, WKUIDelegate,
                 isFindInteractionEnabled = settings.isFindInteractionEnabled
             }
             
-            if #available(iOS 16.4, *) {
-                isInspectable = settings.isInspectable
-            }
+//             if #available(iOS 16.4, *) {
+//                 isInspectable = settings.isInspectable
+//             }
             
             if settings.clearCache {
                 clearCache()
@@ -520,9 +520,9 @@ public class InAppWebView: WKWebView, UIScrollViewDelegate, WKUIDelegate,
                 configuration.preferences.isSiteSpecificQuirksModeEnabled = settings.isSiteSpecificQuirksModeEnabled
                 configuration.preferences.isElementFullscreenEnabled = settings.isElementFullscreenEnabled
             }
-            if #available(iOS 16.4, *) {
-                configuration.preferences.shouldPrintBackgrounds = settings.shouldPrintBackgrounds
-            }
+//             if #available(iOS 16.4, *) {
+//                 configuration.preferences.shouldPrintBackgrounds = settings.shouldPrintBackgrounds
+//             }
         }
     }
     
@@ -1269,14 +1269,14 @@ public class InAppWebView: WKWebView, UIScrollViewDelegate, WKUIDelegate,
                 isFindInteractionEnabled = newSettings.isFindInteractionEnabled
             }
         }
-        if #available(iOS 16.4, *) {
-            if newSettingsMap["isInspectable"] != nil, settings?.isInspectable != newSettings.isInspectable {
-                isInspectable = newSettings.isInspectable
-            }
-            if newSettingsMap["shouldPrintBackgrounds"] != nil, settings?.shouldPrintBackgrounds != newSettings.shouldPrintBackgrounds {
-                configuration.preferences.shouldPrintBackgrounds = newSettings.shouldPrintBackgrounds
-            }
-        }
+//         if #available(iOS 16.4, *) {
+//             if newSettingsMap["isInspectable"] != nil, settings?.isInspectable != newSettings.isInspectable {
+//                 isInspectable = newSettings.isInspectable
+//             }
+//             if newSettingsMap["shouldPrintBackgrounds"] != nil, settings?.shouldPrintBackgrounds != newSettings.shouldPrintBackgrounds {
+//                 configuration.preferences.shouldPrintBackgrounds = newSettings.shouldPrintBackgrounds
+//             }
+//         }
         
         scrollView.isScrollEnabled = !(newSettings.disableVerticalScroll && newSettings.disableHorizontalScroll)
         
