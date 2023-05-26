@@ -168,10 +168,10 @@ public class InAppWebViewSettings: ISettings<InAppWebView> {
             if #available(iOS 16.0, *) {
                 realSettings["isFindInteractionEnabled"] = webView.isFindInteractionEnabled
             }
-            if #available(iOS 16.4, *) {
-                realSettings["isInspectable"] = webView.isInspectable
-                realSettings["shouldPrintBackgrounds"] = configuration.preferences.shouldPrintBackgrounds
-            }
+//             if #available(iOS 16.4, *) {
+//                 realSettings["isInspectable"] = webView.isInspectable
+//                 realSettings["shouldPrintBackgrounds"] = configuration.preferences.shouldPrintBackgrounds
+//             }
         }
         return realSettings
     }
